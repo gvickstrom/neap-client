@@ -9,7 +9,7 @@
   coffeeService.$inject = ['$http'];
 
   function coffeeService($http) {
-    const baseURL = 'http://whispering-wave-67278.herokuapp.com/coffee';
+    const baseURL = 'https://whispering-wave-67278.herokuapp.com/coffee';
     /*jshint validthis: true */
     this.getAllCoffee = function() {
       return $http.get(baseURL);
