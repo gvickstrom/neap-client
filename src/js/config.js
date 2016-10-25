@@ -13,6 +13,11 @@
         controller: 'coffeeController',
         controllerAs: 'coffeeCtrl'
       })
+      .when('/user', {
+        templateUrl: 'js/components/user/user.view.html',
+        controller: 'userController',
+        controllerAs: 'userCtrl'
+      })
       .otherwise({
         redirectTo: '/coffee'
       });

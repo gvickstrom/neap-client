@@ -5,6 +5,7 @@
   angular
     .module('myApp.services', [])
     .service('coffeeService', coffeeService);
+    .service('userService', userService);
 
   coffeeService.$inject = ['$http'];
 
@@ -20,6 +21,10 @@
     this.addCoffee = function(coffee) {
       return $http.post(baseURL, coffee);
     };
+  }
+
+  function userService($http) {
+    this.test = 'hi'
   }
 
 })();
