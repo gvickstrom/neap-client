@@ -14,3 +14,19 @@
     <button type="submit" class="btn btn-success"></button>
   </div>
 </form>
+
+<h2>Login</h2>
+
+<form ng-submit="userCtrl.register()" novalidate>
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" class="form-control" id="username" ng-model="userCtrl.newUser.username">
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="text" class="form-control" id="password" ng-model="userCtrl.newUser.password">
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-success"></button>
+  </div>
+</form>

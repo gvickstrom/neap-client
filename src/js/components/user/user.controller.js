@@ -13,9 +13,21 @@
     const vm = this;
     vm.test = 'boom';
     vm.user = {};
+    vm.newUser = {};
     vm.onSubmit = function() {
-      console.log('it worked', vm.user);
+      userService.login(vm.user)
+      .then((user) => {
+        localStorage.setItem('token', user.data.token);
+      });
+      vm.user = {};
     };
-    console.log(userService.test);
+    vm.register = function() {
+      userService.register(vm.newUser)
+      .then((user) => {
+        localStorage.setItem('token', user.data.token);
+      });
+      vm.newUser = {};
+    };
   }
+
 })();
